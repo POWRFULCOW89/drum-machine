@@ -1,0 +1,55 @@
+html, body {
+height: 100%;
+}
+
+body, .center {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#display {
+    max-width: 130px;
+    min-width: 130px;
+}
+
+$main: #eee;
+$secondary: #3AF;
+$round: 50px;
+$dim: 30px;
+$time: 0.15s;
+$ease: ease-out;
+
+.main {
+
+border: 1px solid $main;
+}
+
+.toggle-container {
+height: $dim;
+//display: flex;
+//justify-content: center;
+position: relative;
+background-color: $main;
+}
+
+.toggle-switch {
+position: absolute;
+height: $dim;
+width: $dim;
+background-color: $secondary;
+}
+
+.toggle-on {
+left: calc(100% - 30px);
+transition: left $time $ease;
+}
+
+.toggle-off {
+left: 0%;
+transition: left $time $ease;
+}
+
+.drum-pad {
+    flex:1;
+}
